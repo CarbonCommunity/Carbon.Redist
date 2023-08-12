@@ -36,7 +36,7 @@
         ]
       },
       {
-        "HookName": "OnSkinRefreshStart",
+        "HookName": "OnSkinRefreshEnd",
         "HookParameters": [
           "__instance"
         ],
@@ -47,7 +47,7 @@
         "PatchParameters": []
       },
       {
-        "HookName": "OnSkinRefreshEnd",
+        "HookName": "OnSkinRefreshStart",
         "HookParameters": [
           "__instance"
         ],
@@ -58,29 +58,20 @@
         "PatchParameters": []
       }
     ],
+    "Inventory": [
+      {
+        "HookName": "OnItemContainerChanged",
+        "HookParameters": [
+          "__instance"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ItemContainer",
+        "PatchMethod": "OnChanged",
+        "PatchReturnType": null,
+        "PatchParameters": []
+      }
+    ],
     "Menu": [
-      {
-        "HookName": "OnMenuShow",
-        "HookParameters": [
-          "MainMenuSystem.Instance"
-        ],
-        "ReturnNonNull": false,
-        "PatchType": "MainMenuSystem",
-        "PatchMethod": "Show",
-        "PatchReturnType": null,
-        "PatchParameters": []
-      },
-      {
-        "HookName": "OnMenuHide",
-        "HookParameters": [
-          "MainMenuSystem.Instance"
-        ],
-        "ReturnNonNull": false,
-        "PatchType": "MainMenuSystem",
-        "PatchMethod": "Hide",
-        "PatchReturnType": null,
-        "PatchParameters": []
-      },
       {
         "HookName": "OnCommandSubmit",
         "HookParameters": [
@@ -106,21 +97,54 @@
         "PatchMethod": "OnToggleChanged",
         "PatchReturnType": null,
         "PatchParameters": []
+      },
+      {
+        "HookName": "OnMenuHide",
+        "HookParameters": [
+          "MainMenuSystem.Instance"
+        ],
+        "ReturnNonNull": false,
+        "PatchType": "MainMenuSystem",
+        "PatchMethod": "Hide",
+        "PatchReturnType": null,
+        "PatchParameters": []
+      },
+      {
+        "HookName": "OnMenuShow",
+        "HookParameters": [
+          "MainMenuSystem.Instance"
+        ],
+        "ReturnNonNull": false,
+        "PatchType": "MainMenuSystem",
+        "PatchMethod": "Show",
+        "PatchReturnType": null,
+        "PatchParameters": []
       }
     ],
     "Player": [
       {
-        "HookName": "OnPlayerDisconnect",
+        "HookName": "InSafeZone",
         "HookParameters": [
-          "__instance",
-          "str"
+          "__instance"
         ],
         "ReturnNonNull": true,
-        "PatchType": "Network.Client",
-        "PatchMethod": "OnDisconnected",
+        "PatchType": "BasePlayer",
+        "PatchMethod": "InSafeZone",
+        "PatchReturnType": "System.Boolean",
+        "PatchParameters": []
+      },
+      {
+        "HookName": "OnAttacked",
+        "HookParameters": [
+          "__instance",
+          "info"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "BasePlayer",
+        "PatchMethod": "OnAttacked",
         "PatchReturnType": null,
         "PatchParameters": [
-          "System.String"
+          "HitInfo"
         ]
       },
       {
@@ -162,44 +186,20 @@
         ]
       },
       {
-        "HookName": "OnAttacked",
+        "HookName": "OnPlayerDisconnect",
         "HookParameters": [
           "__instance",
-          "info"
+          "str"
         ],
         "ReturnNonNull": true,
-        "PatchType": "BasePlayer",
-        "PatchMethod": "OnAttacked",
+        "PatchType": "Network.Client",
+        "PatchMethod": "OnDisconnected",
         "PatchReturnType": null,
         "PatchParameters": [
-          "HitInfo"
+          "System.String"
         ]
-      },
-      {
-        "HookName": "InSafeZone",
-        "HookParameters": [
-          "__instance"
-        ],
-        "ReturnNonNull": true,
-        "PatchType": "BasePlayer",
-        "PatchMethod": "InSafeZone",
-        "PatchReturnType": "System.Boolean",
-        "PatchParameters": []
       }
     ],
-    "Skin": [],
-    "Inventory": [
-      {
-        "HookName": "OnItemContainerChanged",
-        "HookParameters": [
-          "__instance"
-        ],
-        "ReturnNonNull": true,
-        "PatchType": "ItemContainer",
-        "PatchMethod": "OnChanged",
-        "PatchReturnType": null,
-        "PatchParameters": []
-      }
-    ]
+    "Skin": []
   }
 }
