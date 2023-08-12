@@ -200,6 +200,50 @@
         ]
       }
     ],
-    "Skin": []
+    "Network": [
+      {
+        "HookName": "OnNetowrkGroupEnter",
+        "HookParameters": [
+          "__instance",
+          "group"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "BaseNetworkable",
+        "PatchMethod": "OnNetworkGroupEnter",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "Network.Visibility.Group"
+        ]
+      },
+      {
+        "HookName": "OnNetworkGroupLeave",
+        "HookParameters": [
+          "__instance",
+          "group"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "BaseNetworkable",
+        "PatchMethod": "OnNetworkGroupLeave",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "Network.Visibility.Group"
+        ]
+      },
+      {
+        "HookName": "OnClientEntitySpawn",
+        "HookParameters": [
+          "__instance",
+          "info",
+          "__instance.JustCreated"
+        ],
+        "ReturnNonNull": false,
+        "PatchType": "BaseNetworkable",
+        "PatchMethod": "ClientSpawn",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "ProtoBuf.Entity"
+        ]
+      }
+    ]
   }
 }
