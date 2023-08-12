@@ -113,9 +113,7 @@
         "PatchType": "BaseNetworkable",
         "PatchMethod": "EntityDestroy",
         "PatchReturnType": "",
-        "PatchParameters": [
-          ""
-        ]
+        "PatchParameters": []
       },
       {
         "HookName": "OnClientEntitySpawn",
