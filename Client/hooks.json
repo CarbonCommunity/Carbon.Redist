@@ -131,6 +131,22 @@
         ]
       },
       {
+        "HookName": "OnCreateOrUpdateEntity",
+        "HookParameters": [
+          "__instance",
+          "info",
+          "size"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "Client",
+        "PatchMethod": "CreateOrUpdateEntity",
+        "PatchReturnType": "BaseEntity",
+        "PatchParameters": [
+          "ProtoBuf.Entity",
+          "System.Int64"
+        ]
+      },
+      {
         "HookName": "OnNetowrkGroupEnter",
         "HookParameters": [
           "__instance",
@@ -187,6 +203,20 @@
         "PatchParameters": [
           "BasePlayer",
           "System.UInt32",
+          "Network.Message"
+        ]
+      },
+      {
+        "HookName": "OnClientApproved",
+        "HookParameters": [
+          "__instance",
+          "packet"
+        ],
+        "ReturnNonNull": false,
+        "PatchType": "Client",
+        "PatchMethod": "OnApproved",
+        "PatchReturnType": "",
+        "PatchParameters": [
           "Network.Message"
         ]
       }
