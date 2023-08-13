@@ -32,7 +32,7 @@
         ],
         "ReturnNonNull": true,
         "PatchType": "BaseEntity",
-        "PatchMethod": "OnSkinRefreshStart",
+        "PatchMethod": "OnSkinRefreshEnd",
         "PatchReturnType": "",
         "PatchParameters": [],
         "MetadataDescription": [
