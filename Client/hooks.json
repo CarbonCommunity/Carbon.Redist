@@ -180,7 +180,7 @@
           "rpc",
           "msg"
         ],
-        "ReturnNonNull": false,
+        "ReturnNonNull": true,
         "PatchType": "BaseEntity",
         "PatchMethod": "OnRpcMessage",
         "PatchReturnType": "System.Boolean",
