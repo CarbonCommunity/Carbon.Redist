@@ -11,10 +11,18 @@
         "ReturnNonNull": false,
         "PatchType": "BaseEntity",
         "PatchMethod": "OnSkinChanged",
-        "PatchReturnType": null,
+        "PatchReturnType": "",
         "PatchParameters": [
           "System.UInt64",
           "System.UInt64"
+        ],
+        "MetadataDescription": [
+          "Gets called when a skinned entity updates its skin."
+        ],
+        "MetadataParameters": [
+          "BaseEntity entity",
+          "ulong oldSkinId",
+          "ulong newSkinId"
         ]
       },
       {
@@ -25,8 +33,14 @@
         "ReturnNonNull": true,
         "PatchType": "BaseEntity",
         "PatchMethod": "OnSkinRefreshStart",
-        "PatchReturnType": null,
-        "PatchParameters": []
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when the skin finished loading."
+        ],
+        "MetadataParameters": [
+          "BaseEntity entity"
+        ]
       },
       {
         "HookName": "OnSkinRefreshStart",
@@ -36,8 +50,14 @@
         "ReturnNonNull": true,
         "PatchType": "BaseEntity",
         "PatchMethod": "OnSkinRefreshStart",
-        "PatchReturnType": null,
-        "PatchParameters": []
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when an entity starts loading a skin for it to be applied to."
+        ],
+        "MetadataParameters": [
+          "BaseEntity entity"
+        ]
       }
     ],
     "Inventory": [
@@ -49,8 +69,14 @@
         "ReturnNonNull": true,
         "PatchType": "ItemContainer",
         "PatchMethod": "OnChanged",
-        "PatchReturnType": null,
-        "PatchParameters": []
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when a container the client's watching gets updated/marked dirty by the server."
+        ],
+        "MetadataParameters": [
+          "ItemContainer container"
+        ]
       }
     ],
     "Menu": [
@@ -63,9 +89,16 @@
         "ReturnNonNull": true,
         "PatchType": "ConsoleUI",
         "PatchMethod": "SubmitCommand",
-        "PatchReturnType": null,
+        "PatchReturnType": "",
         "PatchParameters": [
           "System.String"
+        ],
+        "MetadataDescription": [
+          "Gets called when the text input of the console gets submitted."
+        ],
+        "MetadataParameters": [
+          "ConsoleUI console",
+          "string text"
         ]
       },
       {
@@ -77,8 +110,15 @@
         "ReturnNonNull": true,
         "PatchType": "ToggleLayer",
         "PatchMethod": "OnToggleChanged",
-        "PatchReturnType": null,
-        "PatchParameters": []
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when a layer has been toggled in the F1 -> Tools dev panel."
+        ],
+        "MetadataParameters": [
+          "int layer",
+          "bool isOn"
+        ]
       },
       {
         "HookName": "OnMenuHide",
@@ -88,8 +128,14 @@
         "ReturnNonNull": false,
         "PatchType": "MainMenuSystem",
         "PatchMethod": "Hide",
-        "PatchReturnType": null,
-        "PatchParameters": []
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when the main menu becomes hidden."
+        ],
+        "MetadataParameters": [
+          "MainMenuSystem menu"
+        ]
       },
       {
         "HookName": "OnMenuShow",
@@ -99,11 +145,38 @@
         "ReturnNonNull": false,
         "PatchType": "MainMenuSystem",
         "PatchMethod": "Show",
-        "PatchReturnType": null,
-        "PatchParameters": []
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when the main menu becomes visible."
+        ],
+        "MetadataParameters": [
+          "MainMenuSystem menu"
+        ]
       }
     ],
     "Network": [
+      {
+        "HookName": "OnClientApproved",
+        "HookParameters": [
+          "__instance",
+          "packet"
+        ],
+        "ReturnNonNull": false,
+        "PatchType": "Client",
+        "PatchMethod": "OnApproved",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "Network.Message"
+        ],
+        "MetadataDescription": [
+          "Gets called when the server sends the approval packet allowing the client to connect."
+        ],
+        "MetadataParameters": [
+          "Client client",
+          "Network.Message packet"
+        ]
+      },
       {
         "HookName": "OnClientEntityDestroy",
         "HookParameters": [
@@ -113,7 +186,13 @@
         "PatchType": "BaseNetworkable",
         "PatchMethod": "EntityDestroy",
         "PatchReturnType": "",
-        "PatchParameters": []
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when a client-side entity gets destroyed due to it being out of the group/server destroyed."
+        ],
+        "MetadataParameters": [
+          "BaseNetworkable net"
+        ]
       },
       {
         "HookName": "OnClientEntitySpawn",
@@ -128,6 +207,14 @@
         "PatchReturnType": "",
         "PatchParameters": [
           "ProtoBuf.Entity"
+        ],
+        "MetadataDescription": [
+          "Gets called when a client side entity has been spawned."
+        ],
+        "MetadataParameters": [
+          "BaseNetworkable net",
+          "ProtoBuf.Entity info",
+          "bool justCreated"
         ]
       },
       {
@@ -144,6 +231,14 @@
         "PatchParameters": [
           "ProtoBuf.Entity",
           "System.Int64"
+        ],
+        "MetadataDescription": [
+          "Gets called when the server calls the CreateOrUpdateEntity RPC."
+        ],
+        "MetadataParameters": [
+          "Client client",
+          "ProtoBuf.Entity info",
+          "uint size"
         ]
       },
       {
@@ -158,6 +253,13 @@
         "PatchReturnType": "",
         "PatchParameters": [
           "Network.Visibility.Group"
+        ],
+        "MetadataDescription": [
+          "Gets called when the client enters a network group."
+        ],
+        "MetadataParameters": [
+          "BaseNetworkable net",
+          "Network.Visibility.Group group"
         ]
       },
       {
@@ -172,6 +274,13 @@
         "PatchReturnType": "",
         "PatchParameters": [
           "Network.Visibility.Group"
+        ],
+        "MetadataDescription": [
+          "Gets called when a player leaves a network group."
+        ],
+        "MetadataParameters": [
+          "BaseNetworkable net",
+          "Network.Visibility.Group group"
         ]
       },
       {
@@ -186,6 +295,13 @@
         "PatchReturnType": "",
         "PatchParameters": [
           "ProtoBuf.Entity"
+        ],
+        "MetadataDescription": [
+          "Gets called when there's an entity network update from the server."
+        ],
+        "MetadataParameters": [
+          "BaseNetworkable net",
+          "ProtoBuf.Entity entity"
         ]
       },
       {
@@ -204,20 +320,15 @@
           "BasePlayer",
           "System.UInt32",
           "Network.Message"
-        ]
-      },
-      {
-        "HookName": "OnClientApproved",
-        "HookParameters": [
-          "__instance",
-          "packet"
         ],
-        "ReturnNonNull": false,
-        "PatchType": "Client",
-        "PatchMethod": "OnApproved",
-        "PatchReturnType": "",
-        "PatchParameters": [
-          "Network.Message"
+        "MetadataDescription": [
+          "Gets called when the server delivers the OnRpcMessage RPC."
+        ],
+        "MetadataParameters": [
+          "BaseEntity entity",
+          "BasePlayer player",
+          "int rpc",
+          "Network.Message msg"
         ]
       }
     ],
@@ -231,7 +342,14 @@
         "PatchType": "BasePlayer",
         "PatchMethod": "InSafeZone",
         "PatchReturnType": "System.Boolean",
-        "PatchParameters": []
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when the client checks if it's in a safe-zone trigger or not.",
+          "Return `boolean` to override original method logic."
+        ],
+        "MetadataParameters": [
+          "BasePlayer player"
+        ]
       },
       {
         "HookName": "OnAttacked",
@@ -242,9 +360,16 @@
         "ReturnNonNull": true,
         "PatchType": "BasePlayer",
         "PatchMethod": "OnAttacked",
-        "PatchReturnType": null,
+        "PatchReturnType": "",
         "PatchParameters": [
           "HitInfo"
+        ],
+        "MetadataDescription": [
+          "Gets called when the client receives an attack from the server."
+        ],
+        "MetadataParameters": [
+          "BasePlayer player",
+          "HitInfo info"
         ]
       },
       {
@@ -256,8 +381,15 @@
         "ReturnNonNull": true,
         "PatchType": "BasePlayer",
         "PatchMethod": "HeldEntityStart",
-        "PatchReturnType": null,
-        "PatchParameters": []
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when the player held item gets changed."
+        ],
+        "MetadataParameters": [
+          "BasePlayer player",
+          "Item item"
+        ]
       },
       {
         "HookName": "OnHeldEmpty",
@@ -268,8 +400,15 @@
         "ReturnNonNull": true,
         "PatchType": "BasePlayer",
         "PatchMethod": "HeldEntityEnd",
-        "PatchReturnType": null,
-        "PatchParameters": []
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when the player held item becomes null."
+        ],
+        "MetadataParameters": [
+          "BasePlayer player",
+          "Item item"
+        ]
       },
       {
         "HookName": "OnLand",
@@ -280,9 +419,16 @@
         "ReturnNonNull": true,
         "PatchType": "BasePlayer",
         "PatchMethod": "OnLand",
-        "PatchReturnType": null,
+        "PatchReturnType": "",
         "PatchParameters": [
           "System.Single"
+        ],
+        "MetadataDescription": [
+          "Gets called when the player lands on a surface."
+        ],
+        "MetadataParameters": [
+          "BasePlayer player",
+          "float velocity"
         ]
       },
       {
@@ -294,9 +440,16 @@
         "ReturnNonNull": true,
         "PatchType": "Network.Client",
         "PatchMethod": "OnDisconnected",
-        "PatchReturnType": null,
+        "PatchReturnType": "",
         "PatchParameters": [
           "System.String"
+        ],
+        "MetadataDescription": [
+          "Gets called when the client gets disconnected from a server."
+        ],
+        "MetadataParameters": [
+          "BasePlayer player",
+          "string reason"
         ]
       }
     ]
