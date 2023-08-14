@@ -242,6 +242,48 @@
         ]
       },
       {
+        "HookName": "OnEntityFlagsUpdate",
+        "HookParameters": [
+          "__instance",
+          "packet"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "Client",
+        "PatchMethod": "OnEntityFlags",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "Network.Message"
+        ],
+        "MetadataDescription": [
+          "Gets called when the server updates the flags of the player."
+        ],
+        "MetadataParameters": [
+          "Client client",
+          "Network.Message msg"
+        ]
+      },
+      {
+        "HookName": "OnEntityPositionUpdate",
+        "HookParameters": [
+          "__instance",
+          "packet"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "Client",
+        "PatchMethod": "OnEntityPosition",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "Network.Message"
+        ],
+        "MetadataDescription": [
+          "Gets called when the server updates the position of the player."
+        ],
+        "MetadataParameters": [
+          "Client client",
+          "Network.Message msg"
+        ]
+      },
+      {
         "HookName": "OnNetowrkGroupEnter",
         "HookParameters": [
           "__instance",
