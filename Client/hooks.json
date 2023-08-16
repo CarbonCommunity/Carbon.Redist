@@ -372,6 +372,27 @@
           "int rpc",
           "Network.Message msg"
         ]
+      },
+      {
+        "HookName": "OnViewModelDeploy",
+        "HookParameters": [
+          "__instance",
+          "__instance.targetEntity"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ViewModel",
+        "PatchMethod": "Deploy",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "BaseEntity"
+        ],
+        "MetadataDescription": [
+          "Gets called when the viewmodel deploys a new held entity (right before animation starts)."
+        ],
+        "MetadataParameters": [
+          "ViewModel vm",
+          "HeldEntity held"
+        ]
       }
     ],
     "Player": [
