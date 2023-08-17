@@ -493,6 +493,27 @@
           "int rpc",
           "Network.Message msg"
         ]
+      },
+      {
+        "HookName": "OnNetworkMessage",
+        "HookParameters": [
+          "__instance",
+          "packet"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "Client",
+        "PatchMethod": "OnNetworkMessage",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "Network.Message"
+        ],
+        "MetadataDescription": [
+          "Gets called when there's an incoming network message from the server."
+        ],
+        "MetadataParameters": [
+          "Client client",
+          "Network.Message msg"
+        ]
       }
     ],
     "Player": [
@@ -699,6 +720,21 @@
           "string name",
           "int layer"
         ]
+      }
+    ],
+    "Miscellaneous": [
+      {
+        "HookName": "OnOSNameOverride",
+        "HookParameters": [],
+        "ReturnNonNull": true,
+        "PatchType": "Client",
+        "PatchMethod": "GetOSName",
+        "PatchReturnType": "System.String",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Overrides the OS name method of the client."
+        ],
+        "MetadataParameters": []
       }
     ]
   }
