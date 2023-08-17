@@ -198,33 +198,6 @@
         "MetadataParameters": [
           "ItemContainer container"
         ]
-      },
-      {
-        "HookName": "OnInventoryInspectedOptionsRedraw",
-        "HookParameters": [
-          "SelectedItem.Instance",
-          "oldOpts",
-          "newOpts",
-          "item"
-        ],
-        "ReturnNonNull": false,
-        "PatchType": "SelectedItem",
-        "PatchMethod": "NeedsOptionsUpdate",
-        "PatchReturnType": "System.Boolean",
-        "PatchParameters": [
-          "System.Collections.Generic.List<GameMenu.Option>",
-          "System.Collections.Generic.List<GameMenu.Option>",
-          "Item"
-        ],
-        "MetadataDescription": [
-          "Gets called when the list of options of a selected item gets redrawn."
-        ],
-        "MetadataParameters": [
-          "SelectedItem view",
-          "List<GameMenu.Option oldOpts",
-          "List<GameMenu.Option newOpts",
-          "Item item"
-        ]
       }
     ],
     "Menu": [
