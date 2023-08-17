@@ -372,27 +372,6 @@
           "int rpc",
           "Network.Message msg"
         ]
-      },
-      {
-        "HookName": "OnViewModelDeploy",
-        "HookParameters": [
-          "__instance",
-          "__instance.targetEntity"
-        ],
-        "ReturnNonNull": true,
-        "PatchType": "ViewModel",
-        "PatchMethod": "Deploy",
-        "PatchReturnType": "",
-        "PatchParameters": [
-          "BaseEntity"
-        ],
-        "MetadataDescription": [
-          "Gets called when the viewmodel deploys a new held entity (right before animation starts)."
-        ],
-        "MetadataParameters": [
-          "ViewModel vm",
-          "HeldEntity held"
-        ]
       }
     ],
     "Player": [
@@ -513,6 +492,91 @@
         "MetadataParameters": [
           "BasePlayer player",
           "string reason"
+        ]
+      }
+    ],
+    "ViewModel": [
+      {
+        "HookName": "OnViewModelDeploy",
+        "HookParameters": [
+          "__instance",
+          "__instance.targetEntity"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ViewModel",
+        "PatchMethod": "Deploy",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "BaseEntity"
+        ],
+        "MetadataDescription": [
+          "Gets called when the viewmodel deploys a new held entity (right before animation starts)."
+        ],
+        "MetadataParameters": [
+          "ViewModel vm",
+          "HeldEntity held"
+        ]
+      },
+      {
+        "HookName": "OnViewModelHolster",
+        "HookParameters": [
+          "__instance",
+          "__instance.targetEntity"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ViewModel",
+        "PatchMethod": "Holster",
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when the held viewmodel is holstered."
+        ],
+        "MetadataParameters": [
+          "ViewModel vm",
+          "HeldEntity held"
+        ]
+      },
+      {
+        "HookName": "OnViewModelClear",
+        "HookParameters": [
+          "__instance",
+          "__instance.targetEntity"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ViewModel",
+        "PatchMethod": "Clear",
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when the held viewmodel is holstered."
+        ],
+        "MetadataParameters": [
+          "ViewModel vm",
+          "HeldEntity held"
+        ]
+      },
+      {
+        "HookName": "OnViewModelPlay",
+        "HookParameters": [
+          "__instance",
+          "__instance.targetEntity"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ViewModel",
+        "PatchMethod": "Play",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "System.String",
+          "System.Int32"
+        ],
+        "MetadataDescription": [
+          "Gets when an animation starts playing on the current viewmodel."
+        ],
+        "MetadataParameters": [
+          "ViewModel vm",
+          "HeldEntity held",
+          "string name",
+          "int layer"
         ]
       }
     ]
