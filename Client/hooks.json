@@ -62,47 +62,28 @@
     ],
     "Inventory": [
       {
-        "HookName": "OnItemContainerChanged",
+        "HookName": "OnInventoryInspectedItemDeselect",
         "HookParameters": [
-          "__instance"
+          "SelectedItem.Instance",
+          "SelectedItem.Instance.selectedItem"
         ],
         "ReturnNonNull": true,
-        "PatchType": "ItemContainer",
-        "PatchMethod": "OnChanged",
+        "PatchType": "SelectedItem",
+        "PatchMethod": "ClearSelection",
         "PatchReturnType": "",
         "PatchParameters": [],
         "MetadataDescription": [
-          "Gets called when a container the client's watching gets updated/marked dirty by the server."
+          "Gets called when the inspected item gets deselected."
         ],
         "MetadataParameters": [
-          "ItemContainer container"
-        ]
-      },
-      {
-        "HookName": "OnInventoryItemOptionClick",
-        "HookParameters": [
-          "__instance",
-          "__instance.option",
-          "__instance.item"
-        ],
-        "ReturnNonNull": true,
-        "PatchType": "ItemOptionButton",
-        "PatchMethod": "Pressed",
-        "PatchReturnType": "",
-        "PatchParameters": [],
-        "MetadataDescription": [
-          "Gets called when an inspected item action is executed."
-        ],
-        "MetadataParameters": [
-          "ItemOptionButton button",
-          "Option option",
-          "Item item"
+          "SelectedItem view",
+          "ItemIcon item"
         ]
       },
       {
         "HookName": "OnInventoryInspectedItemSelect",
         "HookParameters": [
-          "__instance",
+          "SelectedItem.Instance",
           "newSelect",
           "silent"
         ],
@@ -124,22 +105,43 @@
         ]
       },
       {
-        "HookName": "OnInventoryInspectedItemDeselect",
+        "HookName": "OnInventoryItemDeselect",
         "HookParameters": [
           "__instance",
-          "__instance.selectedItem"
+          "__instance.item"
         ],
         "ReturnNonNull": true,
-        "PatchType": "SelectedItem",
-        "PatchMethod": "ClearSelection",
+        "PatchType": "ItemIcon",
+        "PatchMethod": "Deselect",
         "PatchReturnType": "",
         "PatchParameters": [],
         "MetadataDescription": [
-          "Gets called when the inspected item gets deselected."
+          "Called when an inspected item is no longer inspected."
         ],
         "MetadataParameters": [
-          "SelectedItem view",
-          "ItemIcon item"
+          "ItemIcon slot",
+          "Item item"
+        ]
+      },
+      {
+        "HookName": "OnInventoryItemOptionClick",
+        "HookParameters": [
+          "__instance",
+          "__instance.option",
+          "__instance.item"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ItemOptionButton",
+        "PatchMethod": "Pressed",
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when an inspected item action is executed."
+        ],
+        "MetadataParameters": [
+          "ItemOptionButton button",
+          "Option option",
+          "Item item"
         ]
       },
       {
@@ -181,22 +183,20 @@
         ]
       },
       {
-        "HookName": "OnInventoryItemDeselect",
+        "HookName": "OnItemContainerChanged",
         "HookParameters": [
-          "__instance",
-          "__instance.item"
+          "__instance"
         ],
         "ReturnNonNull": true,
-        "PatchType": "ItemIcon",
-        "PatchMethod": "Deselect",
+        "PatchType": "ItemContainer",
+        "PatchMethod": "OnChanged",
         "PatchReturnType": "",
         "PatchParameters": [],
         "MetadataDescription": [
-          "Called when an inspected item is no longer inspected."
+          "Gets called when a container the client's watching gets updated/marked dirty by the server."
         ],
         "MetadataParameters": [
-          "ItemIcon slot",
-          "Item item"
+          "ItemContainer container"
         ]
       }
     ],
