@@ -77,6 +77,127 @@
         "MetadataParameters": [
           "ItemContainer container"
         ]
+      },
+      {
+        "HookName": "OnInventoryItemOptionClick",
+        "HookParameters": [
+          "__instance",
+          "__instance.option",
+          "__instance.item"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ItemOptionButton",
+        "PatchMethod": "Pressed",
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when an inspected item action is executed."
+        ],
+        "MetadataParameters": [
+          "ItemOptionButton button",
+          "Option option",
+          "Item item"
+        ]
+      },
+      {
+        "HookName": "OnInventoryInspectedItemSelect",
+        "HookParameters": [
+          "__instance",
+          "newSelect",
+          "silent"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "SelectedItem",
+        "PatchMethod": "TrySelect",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "ItemIcon",
+          "System.Boolean"
+        ],
+        "MetadataDescription": [
+          "Gets called when the item inspector pops up."
+        ],
+        "MetadataParameters": [
+          "SelectedItem view",
+          "ItemIcon slot",
+          "bool silent"
+        ]
+      },
+      {
+        "HookName": "OnInventoryInspectedItemDeselect",
+        "HookParameters": [
+          "__instance",
+          "__instance.selectedItem"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "SelectedItem",
+        "PatchMethod": "ClearSelection",
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when the inspected item gets deselected."
+        ],
+        "MetadataParameters": [
+          "SelectedItem view",
+          "ItemIcon item"
+        ]
+      },
+      {
+        "HookName": "OnInventoryItemSelect",
+        "HookParameters": [
+          "__instance",
+          "__instance.item"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ItemIcon",
+        "PatchMethod": "Select",
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Called when an item is selected."
+        ],
+        "MetadataParameters": [
+          "ItemIcon slot",
+          "Item item"
+        ]
+      },
+      {
+        "HookName": "OnInventoryItemSelectSilent",
+        "HookParameters": [
+          "__instance",
+          "__instance.item"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ItemIcon",
+        "PatchMethod": "SelectSilent",
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Called when an item is selected silently."
+        ],
+        "MetadataParameters": [
+          "ItemIcon slot",
+          "Item item"
+        ]
+      },
+      {
+        "HookName": "OnInventoryItemDeselect",
+        "HookParameters": [
+          "__instance",
+          "__instance.item"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ItemIcon",
+        "PatchMethod": "Deselect",
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Called when an inspected item is no longer inspected."
+        ],
+        "MetadataParameters": [
+          "ItemIcon slot",
+          "Item item"
+        ]
       }
     ],
     "Menu": [
@@ -497,6 +618,25 @@
     ],
     "ViewModel": [
       {
+        "HookName": "OnViewModelClear",
+        "HookParameters": [
+          "__instance",
+          "__instance.targetEntity"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "ViewModel",
+        "PatchMethod": "Clear",
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when the held viewmodel is holstered."
+        ],
+        "MetadataParameters": [
+          "ViewModel vm",
+          "HeldEntity held"
+        ]
+      },
+      {
         "HookName": "OnViewModelDeploy",
         "HookParameters": [
           "__instance",
@@ -526,25 +666,6 @@
         "ReturnNonNull": true,
         "PatchType": "ViewModel",
         "PatchMethod": "Holster",
-        "PatchReturnType": "",
-        "PatchParameters": [],
-        "MetadataDescription": [
-          "Gets called when the held viewmodel is holstered."
-        ],
-        "MetadataParameters": [
-          "ViewModel vm",
-          "HeldEntity held"
-        ]
-      },
-      {
-        "HookName": "OnViewModelClear",
-        "HookParameters": [
-          "__instance",
-          "__instance.targetEntity"
-        ],
-        "ReturnNonNull": true,
-        "PatchType": "ViewModel",
-        "PatchMethod": "Clear",
         "PatchReturnType": "",
         "PatchParameters": [],
         "MetadataDescription": [
