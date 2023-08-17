@@ -65,7 +65,7 @@
         "HookName": "OnInventoryInspectedItemDeselect",
         "HookParameters": [
           "SelectedItem.Instance",
-          "SelectedItem.Instance.selectedItem"
+          "SelectedItem.selectedItem"
         ],
         "ReturnNonNull": true,
         "PatchType": "SelectedItem",
