@@ -202,7 +202,7 @@
       {
         "HookName": "OnInventoryOpen",
         "HookParameters": [
-          "__instance",
+          "UIInventory.Instance",
           "selectHeldItem"
         ],
         "ReturnNonNull": true,
@@ -223,7 +223,7 @@
       {
         "HookName": "OnInventoryClose",
         "HookParameters": [
-          "__instance"
+          "UIInventory.Instance"
         ],
         "ReturnNonNull": true,
         "PatchType": "UIInventory",
