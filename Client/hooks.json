@@ -200,24 +200,20 @@
         ]
       },
       {
-        "HookName": "OnInventoryOpen",
+        "HookName": "OnInventoryToggle",
         "HookParameters": [
-          "UIInventory.Instance",
-          "selectHeldItem"
+          "UIInventory.isOpen"
         ],
         "ReturnNonNull": true,
         "PatchType": "UIInventory",
-        "PatchMethod": "Open",
+        "PatchMethod": "ToggleInventory",
         "PatchReturnType": "",
-        "PatchParameters": [
-          "System.Boolean"
-        ],
+        "PatchParameters": [],
         "MetadataDescription": [
-          "Gets called when the inventory opens."
+          "Gets called when the inventory toggles."
         ],
         "MetadataParameters": [
-          "UIInventory inventory",
-          "bool selectHeldItem"
+          "bool wasOpen"
         ]
       },
       {
