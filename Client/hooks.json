@@ -215,23 +215,6 @@
         "MetadataParameters": [
           "bool wasOpen"
         ]
-      },
-      {
-        "HookName": "OnInventoryClose",
-        "HookParameters": [
-          "UIInventory.Instance"
-        ],
-        "ReturnNonNull": true,
-        "PatchType": "UIInventory",
-        "PatchMethod": "Close",
-        "PatchReturnType": "",
-        "PatchParameters": [],
-        "MetadataDescription": [
-          "Gets called when the inventory closed."
-        ],
-        "MetadataParameters": [
-          "UIInventory inventory"
-        ]
       }
     ],
     "Menu": [
