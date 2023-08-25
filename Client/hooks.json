@@ -198,6 +198,44 @@
         "MetadataParameters": [
           "ItemContainer container"
         ]
+      },
+      {
+        "HookName": "OnInventoryOpen",
+        "HookParameters": [
+          "__instance",
+          "selectHeldItem"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "UIInventory",
+        "PatchMethod": "Open",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "System.Boolean"
+        ],
+        "MetadataDescription": [
+          "Gets called when the inventory opens."
+        ],
+        "MetadataParameters": [
+          "UIInventory inventory",
+          "bool selectHeldItem"
+        ]
+      },
+      {
+        "HookName": "OnInventoryClose",
+        "HookParameters": [
+          "__instance"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "UIInventory",
+        "PatchMethod": "Close",
+        "PatchReturnType": "",
+        "PatchParameters": [],
+        "MetadataDescription": [
+          "Gets called when the inventory closed."
+        ],
+        "MetadataParameters": [
+          "UIInventory inventory"
+        ]
       }
     ],
     "Menu": [
