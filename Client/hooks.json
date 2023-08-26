@@ -16,6 +16,9 @@
           "System.UInt64",
           "System.UInt64"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when a skinned entity updates its skin."
         ],
@@ -35,6 +38,9 @@
         "PatchMethod": "OnSkinRefreshEnd",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the skin finished loading."
         ],
@@ -52,6 +58,9 @@
         "PatchMethod": "OnSkinRefreshStart",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when an entity starts loading a skin for it to be applied to."
         ],
@@ -72,6 +81,9 @@
         "PatchMethod": "ClearSelection",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the inspected item gets deselected."
         ],
@@ -95,6 +107,9 @@
           "ItemIcon",
           "System.Boolean"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the item inspector pops up."
         ],
@@ -115,6 +130,9 @@
         "PatchMethod": "Deselect",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Called when an inspected item is no longer inspected."
         ],
@@ -135,6 +153,9 @@
         "PatchMethod": "Pressed",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when an inspected item action is executed."
         ],
@@ -155,6 +176,9 @@
         "PatchMethod": "Select",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Called when an item is selected."
         ],
@@ -174,6 +198,9 @@
         "PatchMethod": "SelectSilent",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Called when an item is selected silently."
         ],
@@ -192,6 +219,9 @@
         "PatchMethod": "OnChanged",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when a container the client's watching gets updated/marked dirty by the server."
         ],
@@ -209,6 +239,9 @@
         "PatchMethod": "ToggleInventory",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the inventory toggles."
         ],
@@ -231,6 +264,9 @@
         "PatchParameters": [
           "System.String"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the text input of the console gets submitted."
         ],
@@ -250,6 +286,9 @@
         "PatchMethod": "OnToggleChanged",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when a layer has been toggled in the F1 -> Tools dev panel."
         ],
@@ -268,6 +307,9 @@
         "PatchMethod": "Hide",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": true,
+        "NetworkHookName": "OnClientMenuHide",
+        "NetworkHookParameters": [],
         "MetadataDescription": [
           "Gets called when the main menu becomes hidden."
         ],
@@ -285,6 +327,9 @@
         "PatchMethod": "Show",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": true,
+        "NetworkHookName": "OnClientMenuShow",
+        "NetworkHookParameters": [],
         "MetadataDescription": [
           "Gets called when the main menu becomes visible."
         ],
@@ -307,6 +352,9 @@
         "PatchParameters": [
           "Network.Message"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the server sends the approval packet allowing the client to connect."
         ],
@@ -325,6 +373,9 @@
         "PatchMethod": "EntityDestroy",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when a client-side entity gets destroyed due to it being out of the group/server destroyed."
         ],
@@ -346,6 +397,9 @@
         "PatchParameters": [
           "ProtoBuf.Entity"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when a client side entity has been spawned."
         ],
@@ -370,6 +424,9 @@
           "ProtoBuf.Entity",
           "System.Int64"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the server calls the CreateOrUpdateEntity RPC."
         ],
@@ -392,6 +449,9 @@
         "PatchParameters": [
           "Network.Message"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the server updates the flags of the player."
         ],
@@ -413,6 +473,9 @@
         "PatchParameters": [
           "Network.Message"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the server updates the position of the player."
         ],
@@ -434,6 +497,9 @@
         "PatchParameters": [
           "Network.Visibility.Group"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the client enters a network group."
         ],
@@ -455,6 +521,9 @@
         "PatchParameters": [
           "Network.Visibility.Group"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when a player leaves a network group."
         ],
@@ -476,6 +545,9 @@
         "PatchParameters": [
           "ProtoBuf.Entity"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when there's an entity network update from the server."
         ],
@@ -501,6 +573,9 @@
           "System.UInt32",
           "Network.Message"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the server delivers the OnRpcMessage RPC."
         ],
@@ -524,6 +599,9 @@
         "PatchParameters": [
           "Network.Message"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when there's an incoming network message from the server."
         ],
@@ -544,6 +622,9 @@
         "PatchMethod": "InSafeZone",
         "PatchReturnType": "System.Boolean",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the client checks if it's in a safe-zone trigger or not.",
           "Return `boolean` to override original method logic."
@@ -565,6 +646,9 @@
         "PatchParameters": [
           "HitInfo"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the client receives an attack from the server."
         ],
@@ -584,6 +668,9 @@
         "PatchMethod": "HeldEntityStart",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the player held item gets changed."
         ],
@@ -603,6 +690,9 @@
         "PatchMethod": "HeldEntityEnd",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the player held item becomes null."
         ],
@@ -624,6 +714,9 @@
         "PatchParameters": [
           "System.Single"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the player lands on a surface."
         ],
@@ -645,6 +738,9 @@
         "PatchParameters": [
           "System.String"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the client gets disconnected from a server."
         ],
@@ -666,6 +762,9 @@
         "PatchMethod": "Clear",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the held viewmodel is holstered."
         ],
@@ -687,6 +786,9 @@
         "PatchParameters": [
           "BaseEntity"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the viewmodel deploys a new held entity (right before animation starts)."
         ],
@@ -706,6 +808,9 @@
         "PatchMethod": "Holster",
         "PatchReturnType": "",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets called when the held viewmodel is holstered."
         ],
@@ -728,6 +833,9 @@
           "System.String",
           "System.Int32"
         ],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Gets when an animation starts playing on the current viewmodel."
         ],
@@ -748,6 +856,9 @@
         "PatchMethod": "GetOSName",
         "PatchReturnType": "System.String",
         "PatchParameters": [],
+        "Networked": false,
+        "NetworkHookName": null,
+        "NetworkHookParameters": null,
         "MetadataDescription": [
           "Overrides the OS name method of the client."
         ],
