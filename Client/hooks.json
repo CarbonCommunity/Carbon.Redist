@@ -67,6 +67,33 @@
         "MetadataParameters": [
           "BaseEntity entity"
         ]
+      },
+      {
+        "HookName": "OnFlashbangFlash",
+        "HookParameters": [
+          "__instance",
+          "pos",
+          "amount"
+        ],
+        "ReturnNonNull": true,
+        "PatchType": "Flashbang",
+        "PatchMethod": "FlashFrom",
+        "PatchReturnType": "",
+        "PatchParameters": [
+          "UnityEngine.Vector3",
+          "System.Single"
+        ],
+        "Networked": false,
+        "NetworkHookName": "",
+        "NetworkHookParameters": [],
+        "MetadataDescription": [
+          "Gets called when the client reacts to a deployed flashbang."
+        ],
+        "MetadataParameters": [
+          "Flashbang bang",
+          "Vector3 position",
+          "float amount"
+        ]
       }
     ],
     "Inventory": [
