@@ -766,13 +766,13 @@
           "System.String"
         ],
         "Networked": false,
-        "NetworkHookName": null,
-        "NetworkHookParameters": null,
+        "NetworkHookName": "",
+        "NetworkHookParameters": [],
         "MetadataDescription": [
           "Gets called when the client gets disconnected from a server."
         ],
         "MetadataParameters": [
-          "BasePlayer player",
+          "Network.Client client",
           "string reason"
         ]
       }
