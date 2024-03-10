@@ -29,43 +29,27 @@
         ]
       },
       {
-        "HookName": "OnSkinRefreshEnd",
+        "HookName": "OnSkinRefreshed",
         "HookParameters": [
+          "skin",
           "__instance"
         ],
         "ReturnNonNull": true,
         "PatchType": "BaseEntity",
-        "PatchMethod": "OnSkinRefreshEnd",
+        "PatchMethod": "OnSkinRefreshed",
         "PatchReturnType": "",
-        "PatchParameters": [],
+        "PatchParameters": [
+          "Rust.Workshop.Skin"
+        ],
         "Networked": false,
-        "NetworkHookName": null,
-        "NetworkHookParameters": null,
+        "NetworkHookName": "",
+        "NetworkHookParameters": [],
         "MetadataDescription": [
           "Gets called when the skin finished loading."
         ],
         "MetadataParameters": [
-          "BaseEntity entity"
-        ]
-      },
-      {
-        "HookName": "OnSkinRefreshStart",
-        "HookParameters": [
-          "__instance"
-        ],
-        "ReturnNonNull": true,
-        "PatchType": "BaseEntity",
-        "PatchMethod": "OnSkinRefreshStart",
-        "PatchReturnType": "",
-        "PatchParameters": [],
-        "Networked": false,
-        "NetworkHookName": null,
-        "NetworkHookParameters": null,
-        "MetadataDescription": [
-          "Gets called when an entity starts loading a skin for it to be applied to."
-        ],
-        "MetadataParameters": [
-          "BaseEntity entity"
+          "BaseEntity entity",
+          "Rust.Workshop.Skin skin"
         ]
       },
       {
